@@ -28,9 +28,12 @@ def doCheck(logFilePath):
 				for file in data['Files']:
 					printLog(file)
 
-#main
-path = pathlib.Path('./')
-logList = list(path.glob('ExposureChecks-*.json'))
+def main():
+	path = pathlib.Path('./')
+	logList = list(path.glob('ExposureChecks-*.json'))
 
-for log in logList:
-	doCheck(log.name)
+	for log in logList:
+		doCheck(log.name)
+
+#main
+main()
